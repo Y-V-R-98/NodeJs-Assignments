@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+    font-family:'lucida handwriting';
+}
+table {
+  /* font-family:'lucida handwriting'; */
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+a{
+    width: 180px;
+    background-color: #1153e0;
+    color: white;
+    padding: 14px 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    /* flex-direction: column; */
+    
+}
+a:hover{
+    background-color: #430ed4;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>e-mail</th>
+  </tr>
+  
+      <% users.forEach(user => { %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+        </tr>
+    <%  }) %>
+</table>
+
+<a href="/form">Add New Content</a>
+</body>
+</html>
+
